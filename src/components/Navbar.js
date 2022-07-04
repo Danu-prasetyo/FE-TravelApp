@@ -28,8 +28,14 @@ const Navbar = () => {
   };
 
   return (
-    <div className={navfix ? 'header header-bg text-black' : 'header text-white'}>
-      <nav className='flex w-full justify-between items-center h-20 px-4 absolute z-10'>
+    <div>
+      <nav
+        className={
+          navfix
+            ? 'flex w-full justify-between items-center h-20 px-4 fixed z-10 text-black bg-gray-100/90 transition duration-500 ease-in-out'
+            : 'flex w-full justify-between items-center h-20 px-4 absolute z-10 text-white'
+        }
+      >
         <div>
           <h2 className={logo ? 'hidden' : 'block cursor-pointer'}>
             <Link className='cursor-pointer' activeClass='active' to='home' spy={true} smooth={true} duration={1000}>
@@ -73,7 +79,7 @@ const Navbar = () => {
         <div onClick={handleNav} className={nav ? 'absolute text-black left-0 top-0 w-full bg-gray-100/90 px-4 py-6 flex flex-col' : 'absolute left-[-100%]'}>
           <ul>
             <h1>DANUCATION</h1>
-            <li className='border-b border-slate-300'>
+            <li className='border-b border-slate-300 mt-4'>
               <Link activeClass='active' to='home' spy={true} smooth={true} duration={500}>
                 Home
               </Link>
@@ -100,9 +106,13 @@ const Navbar = () => {
             <div className='flex justify-between my-6'>
               <FaFacebook className='icon' />
               <FaTwitter className='icon' />
-              <FaYoutube className='icon' />
+              <a href='https://www.youtube.com/channel/UC1KUO-C5lFWyMq2ZRcL41Mw' target='blank'>
+                <FaYoutube className='icon' />
+              </a>
               <FaPinterest className='icon' />
-              <FaInstagram className='icon' />
+              <a href='https://instagram.com/danugans_' target='blank'>
+                <FaInstagram className='icon' />
+              </a>
             </div>
           </ul>
         </div>
