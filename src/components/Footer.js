@@ -5,7 +5,7 @@ import { Link } from 'react-scroll';
 
 const Footer = () => {
   return (
-    <div className='w-full bg-gray-100 py-16'>
+    <div className='w-full bg-gray-100 pt-16'>
       <div className='max-w-[1240px] mx-auto flex flex-col px-4'>
         <div className='sm:flex text-center justify-between items-center'>
           <h1>
@@ -16,9 +16,13 @@ const Footer = () => {
           <div className='flex justify-between w-full sm:max-w-[280px] my-4'>
             <FaFacebook className='icon' />
             <FaTwitter className='icon' />
-            <FaYoutube className='icon' />
+            <a href='https://www.youtube.com/channel/UC1KUO-C5lFWyMq2ZRcL41Mw' target='blank'>
+              <FaYoutube className='icon' />
+            </a>
             <FaPinterest className='icon' />
-            <FaInstagram className='icon' />
+            <a href='https://instagram.com/danugans_' target='blank'>
+              <FaInstagram className='icon' />
+            </a>
           </div>
         </div>
         <div className='flex justify-between'>
@@ -52,6 +56,17 @@ const Footer = () => {
             </li>
           </ul>
         </div>
+      </div>
+
+      <div>
+        <p className='text-center mt-14 pb-2'>
+          Made with ❤️ by{' '}
+          <span className='hover:text-blue-700'>
+            <a href='https://instagram.com/danugans_' target='blank'>
+              Danu Prasetyo
+            </a>
+          </span>
+        </p>
       </div>
     </div>
   );
